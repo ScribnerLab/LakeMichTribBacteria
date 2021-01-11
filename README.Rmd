@@ -1,25 +1,22 @@
 ---
-title: "Sea Lamprey Rapture"
+title: "LakeMichTribBacteria"
 author: "Jared J. Homola"
-date: "June 29, 2019"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   md_document: default
-  html_document: default
-  pdf_document: default
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Sea Lamprey Rapture 
+# LakeMichTribBacteria 
 
-[![DOI](https://zenodo.org/badge/194438082.svg)](https://zenodo.org/badge/latestdoi/194438082)
 
-SeaLampreyRapture is a research compendium that brings together the data and analyses associated with *Sard et al. 2019. Rapture (RAD capture) panel facilitates analyses characterizing sea lamprey reproductive ecology and movement dynamics, Ecology and Evolution.* 
+LakeMichTribBacteria is a research compendium that brings together the data and analyses associated with *Sanfilippo et al. In Review. Watershed-scale landuse is associated with seasonal and spatial variation in Lake Michigan basin stream bacterial communities, Journal of Great Lakes Research.* 
 
-R analysis scripts are provided in analysis/, R source scripts are in src/, human-readable data in extData/, and R-readable data in an .rda file in data/. Detailed quantitative descriptions of the results of sea lamprey RAPTURE sequencing is available as an R Markdown file and in the README in /analysis. 
+Analysis scripts are provided in analysis/ and human-readable data in extData/. 
 
-Note: All analyses originally conducted and package built using R version 3.5.1 in Windows 10
+Note: All analyses originally conducted and package built using R version 4.0.0 in Windows 10
 
 ### To get started using the package
 
@@ -27,16 +24,38 @@ Note: All analyses originally conducted and package built using R version 3.5.1 
 options(repos=structure(c(CRAN="http://cran.r-project.org")))
 install.packages("devtools")
 library(devtools)
-install_github("ScribnerLab/SeaLampreyRapture")
+install_github("ScribnerLab/LakeMichTribBacteria")
 ```
 
-![OutlineFigure](compendiumOutline.png)
+### /analysis contents
+1. dbRDA.R: Distance-based redundancy analysis
+2. dbRDA_correlationplot_04102020.R: Variable correlation plot
+3. NMDSplots_03042020.R: Non-metric multidimensional scaling 
+4. heatmap.R: Code for generating community heatmap figure
+  
+  
+
+#### /analysis/mothur
+1. 16S_V4_Tiny_data_interactive_mothur_script_PDS_101019_TM_nodistseqscutoff_10162019_1112021.txt: Mothur script to process metabarcoding data. See https://mothur.org/ for more information
+2. Bacterial_Mothur_cons_tax_and_shared_file_processing.R: Mothur post-processing script
+  
+  
+
+### /extData contents
+1. stability.trim.contigs.good.unique.good.filter.unique.pick.precluster.pick.opti_mcc.0.03.cons.taxonomy: The taxonomy file from Mothur (input for file 2. of /analysis/mothur)
+2. stability.trim.contigs.good.unique.good.filter.unique.pick.precluster.pick.opti_mcc.0.03.subsample.shared: Subsample file (input for file 2. of /analysis/mothur)
+3. Bacterial_OTU_Matrix.txt
+4. 2019Bacteria_RiverCoordinates_LkMich.csv: Site coordinates
+5. RiverNames_01112021.xlsx: Site names
+6. bacteria_state.xlsx: Key for site state based on naming scheme
+7. bacteria_time.xlsx: Key for sampling time based on naming scheme
+8. bacteria_rivers_reduced_landscape_vars_raw_&_transformed.xlsx: Landscape variables
+
 
 
 #### Contact
-Nick M. Sard  <br>
-nicholas.sard@oswego.edu  <br> 
-www.oswego.edu/biological-sciences/content/nicholas-m-sard <br>
+Kim T. Scribner  <br>
+scribne3@msu.edu  <br> 
 
 Jared J. Homola  <br>
 jaredhomola20@gmail.com <br> 
