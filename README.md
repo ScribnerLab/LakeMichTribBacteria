@@ -61,7 +61,7 @@ Jared J. Homola <br>
 <a href="mailto:jaredhomola20@gmail.com" class="email">jaredhomola20@gmail.com</a>
 <br> www.jaredhomola.com
 
-#### Copyright (c) 2019 ScribnerLab
+#### Copyright (c) 2021 ScribnerLab
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
